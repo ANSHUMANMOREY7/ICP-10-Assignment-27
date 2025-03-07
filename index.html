@@ -9,11 +9,11 @@
 <style>
     .container {
         border: 2px solid black;
-        border-radius: 20px;
+        border-radius: 10px;
         display: block;
         margin: 90px auto;
         text-align: center;
-        height: 400px;
+        height: 500px;
         width: 900px;
     }
 
@@ -30,6 +30,24 @@
         font-size: 15px;
         margin: 10px;
     }
+    .btn{
+        border: solid black 1px ;
+        padding: 6px 20px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 15px;
+        margin: 10px;
+        
+    }
+    .output{
+        border:2px solid black;
+        border-radius: 10px;
+        margin: 20px;
+        height: 230px;
+        padding: 10px;
+        font-size: 20px;
+        text-align: justify;
+    }
 </style>
 
 <body>
@@ -37,7 +55,7 @@
         <h1 class="heading">name meaning finder</h1>
         <input type="text" class="input " id="inputbox">
         <button class="btn" onclick="name()">Search</button>
-        <p class="output" id="outputbox">-</p>
+        <p class="output" id="outputbox" ></p>
     </div>
 
 </body>
