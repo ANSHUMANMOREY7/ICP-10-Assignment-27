@@ -7,6 +7,9 @@
     <title>name meaning finder</title>
 </head>
 <style>
+    *{
+        background-color: rgb(228, 228, 210);
+    }
     .container {
         border: 2px solid black;
         border-radius: 10px;
@@ -15,12 +18,14 @@
         text-align: center;
         height: 500px;
         width: 900px;
+        background-color: rgb(146, 138, 138);
     }
 
     .heading {
         font-size: 60px;
         text-decoration: underline;
         font-family: 'Times New Roman', Times, serif;
+        background-color: rgb(146, 138, 138);
     }
 
     .input {
@@ -30,6 +35,7 @@
         text-align: center;
         font-size: 15px;
         margin: 10px;
+        background-color: rgb(233, 233, 192);
     }
 
     .btn {
@@ -39,7 +45,7 @@
         text-align: center;
         font-size: 15px;
         margin: 10px;
-
+        background-color: rgb(233, 233, 192);
     }
 
     .output {
@@ -49,7 +55,10 @@
         height: 230px;
         padding: 10px;
         font-size: 20px;
-        text-align: justify;
+        text-align: center;
+        background-color: rgb(233, 233, 192);
+        color: gray;
+        
     }
 </style>
 
@@ -58,7 +67,7 @@
         <h1 class="heading">name meaning finder</h1>
         <input type="text" class="input " id="inputbox" placeholder="enter your name">
         <button class="btn" onclick="doWork()">Search</button>
-        <p class="output" id="outputbox"></p>
+        <p class="output" id="outputbox">enter the first letter of the name in capital</p>
     </div>
     <script>
         const names = {
@@ -87,13 +96,20 @@
         function doWork() {
         const inputElement = document.getElementById('inputbox')
         const outputboxElement = document.getElementById('outputbox')
-        const inputbox = inputElement.value ;
+        const inputbox = inputElement.value
+    
+        
         
         if (inputbox == "") {
             alert('please enter your name')
             return ;
         }
-        outputboxElement.innerText= names[inputbox] ; 
+      
+
+
+        outputboxElement.innerText= names[inputbox] || "name not found"
+        outputboxElement.style.textAlign='justify'
+        outputboxElement.style.color= 'black' 
     }
     </script>
 </body>
